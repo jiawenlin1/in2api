@@ -1,0 +1,20 @@
+-  name: 备份工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/data/backup/${get_extract_data(import_remoteproject_id)}/true
+      method: post
+      json:
+         ["history","data","alarm","curve_root","curve_config","user_root","user_config","role_config","device_root","device_log","login_log","module_log"]
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 删除工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(import_remoteproject_id)}
+         isDeleteFile: true
+   validate:
+      -  equals: {status_code: 200}

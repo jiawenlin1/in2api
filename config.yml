@@ -1,0 +1,27 @@
+base:
+  siot_url: http://127.0.0.1:6700
+  cms_url: http://127.0.0.1:18000
+  base_url: http://127.0.0.1:18000
+tunnel:
+  device_ip: 127.0.0.1
+log:
+  log_name: logs_
+  log_level: info
+  log_format: '[%(asctime)s] %(filename)s->%(funcName)s line:%(lineno)d [%(levelname)s] %(message)s'
+project:
+  project_path: E:\Project_python\api_SIOT
+  x_project: d800d1a6d0be4623aaa824c28dc71981
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwMzU3MDc1MiwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.cA3RR_dmMdoLbMBzjwvR276Dhx8SEeUdoSmuR1TO83w
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: syc123
+  database: TestDB
+  charset: utf8
+sqlserver:
+  DRIVER: SQL Server
+  host: 127.0.0.1
+  user: sa
+  password: 123456
+  database: TestDB

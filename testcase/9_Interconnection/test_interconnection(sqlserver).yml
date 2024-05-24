@@ -1,0 +1,30 @@
+-  name: 测试连接互联项
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/test
+      method: post
+      json:
+        {
+          "id": null,
+          "name": "sqlserver${get_random_number(1000,9999)}",
+          "connectionType": 1,
+          "databaseType": 3,
+          "authenticationType": 1,
+          "server": "${get_config(sqlserver,host)}",
+          "port": 1433,
+          "database": "${get_config(sqlserver,database)}",
+          "databasePath": "",
+          "userName": "${get_config(sqlserver,user)}",
+          "password": "${get_config(sqlserver,password)}",
+          "changedPassword": true,
+          "mqttType": null,
+          "pushType": null,
+          "timingPeriod": null,
+          "changingPeriod": null,
+          "cloudDeviceId": "",
+          "originalSecret": ""
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
