@@ -426,7 +426,7 @@ class TestCreat():
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
         time.sleep(65)
-
+    #
     @allure.story("接口名称：查询数据(定时聚合表)")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/5_DataManagement/query_data(aggregate_table_timing_trigger).yml'))
     def test_query_data_aggregate_table_timing_trigger(self, caseinfo):
