@@ -1,0 +1,9 @@
+-  name: 数据清除
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/data/clean/${get_extract_data(import_remoteproject_id)}?all=true
+      method: post
+      json:
+         ["history","data","alarm","curve_root","curve_config","user_root","user_config","role_config","device_root","device_log","login_log","module_log","formula"]
+   validate:
+      -  equals: {status_code: 200}

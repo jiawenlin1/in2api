@@ -4,17 +4,17 @@
       url: /api/v1/project/data/backup/${get_extract_data(import_remoteproject_id)}/true
       method: post
       json:
-         ["history","data","alarm","curve_root","curve_config","user_root","user_config","role_config","device_root","device_log","login_log","module_log"]
+         ["history","data","alarm","curve_root","curve_config","user_root","user_config","role_config","device_root","device_log","login_log","module_log","formula"]
    validate:
       -  equals: {status_code: 200}
 
--  name: 删除工程
+-  name: 删除工程(保留本地文件)
    base_url: ${get_base_url(cms_url)}
    request:
       url: /api/v1/project/node/deletenodes
       method: put
       data:
          ids: ${get_extract_data(import_remoteproject_id)}
-         isDeleteFile: true
+         isDeleteFile: false
    validate:
       -  equals: {status_code: 200}

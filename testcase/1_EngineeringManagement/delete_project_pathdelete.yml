@@ -12,7 +12,7 @@
    validate:
       -  equals: {status_code: 200}
 
--  name: 删除工程
+-  name: 删除工程(删除本地文件)
    base_url: ${get_base_url(cms_url)}
    request:
       url: /api/v1/project/node/deletenodes

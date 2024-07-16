@@ -128,13 +128,51 @@ class TestCreat():
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
 
+    @allure.story("接口名称：导入备份还原工程")
+    @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/import_remote_project2.yml'))
+    def test_import_remote_project2(self, caseinfo):
+        allure.dynamic.title(caseinfo['name'])
+        allure.dynamic.description(caseinfo['name'])
+        RequestUtil().analysis_yaml(caseinfo)
+        time.sleep(2)
+
+    @allure.story("接口名称：进入工程")
+    @pytest.mark.parametrize('caseinfo',
+                             read_testcase_file('/testcase/1_EngineeringManagement/enter_project.yml'))
+    def test_enter_project(self, caseinfo):
+        allure.dynamic.title(caseinfo['name'])
+        allure.dynamic.description(caseinfo['name'])
+        RequestUtil().analysis_yaml(caseinfo)
+        time.sleep(2)
+
+    @allure.story("接口名称：数据清空")
+    @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/data_clear.yml'))
+    def test_data_clear(self, caseinfo):
+        allure.dynamic.title(caseinfo['name'])
+        allure.dynamic.description(caseinfo['name'])
+        RequestUtil().analysis_yaml(caseinfo)
+        time.sleep(2)
+
+    @allure.story("接口名称：校验数据(数据清空后)")
+    @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/data_check(data_clear).yml.yml'))
+    def test_check_data(self, caseinfo):
+        allure.dynamic.title(caseinfo['name'])
+        allure.dynamic.description(caseinfo['name'])
+        RequestUtil().analysis_yaml(caseinfo)
+
     @allure.story("接口名称：数据恢复")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/data_recovery.yml'))
     def test_data_recovery(self, caseinfo):
         allure.dynamic.title(caseinfo['name'])
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
-        time.sleep(2)
+
+    @allure.story("接口名称：校验数据(数据还原后)")
+    @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/data_check(data_recovery).yml'))
+    def test_check_data2(self, caseinfo):
+        allure.dynamic.title(caseinfo['name'])
+        allure.dynamic.description(caseinfo['name'])
+        RequestUtil().analysis_yaml(caseinfo)
 
     @allure.story("接口名称：备份工程")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/data_backup.yml'))
@@ -143,6 +181,7 @@ class TestCreat():
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
         time.sleep(2)
+
 
     @allure.story("接口名称：获取鉴权码")
     @pytest.mark.parametrize('caseinfo',read_testcase_file('/testcase/1_EngineeringManagement/get_requesttoken.yml'))

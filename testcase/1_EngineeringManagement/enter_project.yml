@@ -1,0 +1,22 @@
+-  name: 打开工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/updateprojectfile
+      method: put
+      data:
+         id: ${get_extract_data(import_remoteproject_id)}
+         isKeepOldFile: false
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 获取导入的工程信息
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/${get_extract_data(import_remoteproject_id)}/info
+      method: get
+   extract:
+      x_import_project: identifier
+      import_project_name: name
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id

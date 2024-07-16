@@ -1,0 +1,275 @@
+-  name: 查用户管理信息(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/authority/user?keyword=
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {userName: A}
+
+-  name: 查角色信息(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/authority/role
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {name: 角色A}
+
+-  name: 查配方(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/runtimeformula/name/get-all?formulaSetId=${get_extract_data(formula_collection_0)}
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   extract:
+      formula_0: id.0
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {name: 配方11}
+
+-  name: 查成分(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/runtimeformula/1/ingredient/get
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {name: 成分1}
+
+-  name: 查模块日志(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/log/modulelog?moduleKey=Unlimited&startTime=2024-06-24+00:00:00&stopTime=2024-06-24+23:59:59&keyWord=&first=true
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {target: 角色B}
+
+-  name: 查设备日志(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/log/devicelog?deviceKey=Unlimited&startTime=2024-06-24+00:00:00&stopTime=2024-06-24+23:59:59&keyWord=&first=true
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {tagName: A1}
+
+-  name: 查登录日志(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/log/loginlog?startTime=2024-06-24+00:00:00&stopTime=2024-06-24+23:59:59&keyWord=&first=true
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {operator: B}
+
+-  name: 查曲线组(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/trend/curvegroup?keyword=
+      method: get
+      headers:
+         Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {name: 曲线1}
+
+-  name: 查询历史数据(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/aggregate
+      method: post
+      json: {"dataSetId":"history","dimensions":[{"aliasName":"","fieldName":"0","sort":0,"timeFormat":"yyyy-MM-dd HH:mm:ss"}],"measures":[{"aliasName":"","fieldName":"23","mode":4,"dataFormat":0,"sort":0,"mergeType":0}],"filters":[],"total":true,"pageSize":10,"pageIndex":1,"limit":10000,"noAggregation":false,"noDimensions":false,"whereJson":"","historyRawData":false,"historyUseWindow":true,"windowUnit":0,"windowMethod":1,"windowValue":1}
+      headers:
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: { A2(4): '11' }
+
+-  name: 查询实时报警数据(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json: {"dataSetId":"a9b66e92-6f83-44e3-ba02-ccbdb0f149c1","tableName":"报警管理-实时表","limit":500}
+      headers:
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      - equals: { _id: 1 }
+
+-  name: 查询历史报警数据(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json: {"dataSetId":"e342f0fa-977d-459a-97b2-f4fc4b36c7e4","tableName":"报警管理-历史表","limit":500}
+      headers:
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+      -  equals: {status_code: 200}
+      - equals: { _id: 2 }
+
+-  name: 查询数据（归档表-定时触发）(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json:
+        {
+           "dataSetId": "134ea944-520d-4a18-b378-1b9f1d478f19",
+           "tableName": "归档表_定时触发",
+           "limit": 500
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+     - equals: { status_code: 200 }
+     - equals: { A1: 11 }
+     - equals: { B1: 77.456 }
+     - equals: { G1: 1 }
+     - equals: { 绝对值B1: 77.456 }
+     - equals: { ROUND1: 77.5 }
+     - equals: { ROUNDDOWN1: 77.4 }
+     - equals: { ROUNDUP1: 77.5 }
+     - equals: { SUM1: 88.456 }
+     - equals: { AVERAGE1: 44.228 }
+     - equals: { COUNT1: 2 }
+     - equals: { COUNTA1: 2 }
+     - equals: { MAX1: 77.456 }
+     - equals: { MEDIAN1: 44.228 }
+     - equals: { MIN1: 11 }
+     - equals: { CHAR2: "\\" }
+     - equals: { CONCATENATE2: "Abcf123" }
+     - equals: { LEFT2: "Ab" }
+     - equals: { LEN2: "4" }
+     - equals: { LOWER2: "abcf" }
+     - equals: { UPPER2: "ABCF" }
+     - equals: { MID2: "Ab" }
+     - equals: { REPLACE2: "替换cf" }
+     - equals: { RIGHT2: "cf" }
+     - equals: { TEXT月日: "10月20日" }
+     - equals: { TODATE2: "2023-06-19 00:00:00" }
+     - equals: { TRIM2: "Abcf" }
+     - equals: { DATE3: "2023-06-19 00:00:00" }
+     - equals: { 差值3年: 3 }
+     - equals: { 差值5月: 5 }
+     - equals: { 差值177日: 177 }
+     - equals: { 差值4249时: 4249 }
+     - equals: { 差值254955分: 254955 }
+     - equals: { 差值15297325秒: 15297325 }
+     - equals: { DAYS18天: "18" }
+     - equals: { AND4: "False" }
+     - equals: { FALSE4: "False" }
+     - equals: { TRUE4: "True" }
+     - equals: { IF4: "及格" }
+     - equals: { NOT_true4: "False" }
+     - equals: { NOT_false4: "True" }
+     - equals: { OR4: "False" }
+     - equals: { Change4: 0 }
+     - greater_than: {随机数0_1: 0}
+     - greater_than: {随机数1_100: 0}
+     - length_greater_than: { NOW3: 0 }
+     - length_greater_than: { YEAR3: 0 }
+     - length_greater_than: { MONTH3: 0 }
+     - length_greater_than: { DAY3: 0 }
+     - length_greater_than: { HOUR3: 0 }
+     - length_greater_than: { MINUTE3: 0 }
+     - length_greater_than: { SECOND3: 0 }
+     - length_greater_than: { TODAY3: 0 }
+     - length_greater_than: { WEEKDAY3: 0 }
+     - length_greater_than: { WEEKNUM3: 0 }
+     - length_greater_than: { 班次: 0 }
+
+-  name: 查询数据(实时聚合表)(还原后)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json:
+        {
+           "dataSetId": "796d7b93-032a-440c-b0da-877c4fee1511",
+           "tableName": "实时聚合表",
+           "limit": 500
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_import_project)}
+   validate:
+     - equals: {status_code: 200}
+     - equals: { COUNT1: 2 }
+     - equals: { COUNTA1: 2 }
+     - equals: { 差值3年: 3 }
+     - equals: { 差值5月: 5 }
+     - equals: { 差值177天: 177 }
+     - equals: { 差值4249时: 4249 }
+     - equals: { 差值254955分: 254955 }
+     - equals: { 差值15297325秒: 15297325 }
+     - equals: { DATE1: "2023-06-19 00:00:00" }
+     - equals: { DAYS1: "18" }
+     - equals: { H1: "Abcf" }
+     - equals: { CHAR1: "\\" }
+     - equals: { CONCATENATE1: "Abcf123" }
+     - equals: { LEFT2: "Ab" }
+     - equals: { LEN1: "4" }
+     - equals: { LOWER1: "abcf" }
+     - equals: { MID12: "Ab" }
+     - equals: { REPLACE1: "替换cf" }
+     - equals: { RIGHT1: "cf" }
+     - equals: { TODATE1: "2023-06-19 00:00:00" }
+     - equals: { TRIM1: "Abcf" }
+     - equals: { UPPER1: "ABCF" }
+     - equals: { 去空格后长度: "4" }
+     - equals: { AND1: "False" }
+     - equals: { FALSE1: "False" }
+     - equals: { TRUE1: "True" }
+     - equals: { IF1: "及格" }
+     - equals: { NOT_true1: "False" }
+     - equals: { NOT_false1: "True" }
+     - equals: { OR1: "False" }
+     - greater_than: {A1: 10}
+     - greater_than: {B1: 10}
+     - greater_than: {G1: 1}
+     - greater_than: {ROUND1: 10}
+     - greater_than: {ROUNDUP1: 10}
+     - greater_than: {ROUNDDOWN1: 10}
+     - greater_than: {SUM1: 10}
+     - greater_than: {AVERAGE1: 10}
+     - greater_than: {MAX1: 10}
+     - greater_than: {MEDIAN1: 10}
+     - greater_than: {MIN1: 10}
+     - greater_than: {ABS1: 10}
+     - greater_than: {max_B1: 10}
+     - greater_than: {min_B1: 10}
+     - length_greater_than: {HOUR1: 0}
+     - length_greater_than: {MINUTE1: 0}
+     - length_greater_than: {MONTH1: 0}
+     - length_greater_than: {NOW1: 0}
+     - length_greater_than: {SECOND1: 0}
+     - length_greater_than: {YEAR1: 0}
+     - length_greater_than: {系统时间: 0}
+     - length_greater_than: {DATE1: 0}
+     - length_greater_than: {TODAY1: 0}
