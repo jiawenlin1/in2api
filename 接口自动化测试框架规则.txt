@@ -59,18 +59,19 @@ csv写法：
     3. 将字符串类数值 转为 数值型
 10.读取空值，csv直接写入""空值
 11.断言：
-    equals：
-        实际值，预期值
-        （实际值等于预期值）
-    contains：实际字段
-        （仅字典类型：返回内容包含某个字段）
-    greater_than：
-        实际值：预期值
-        （实际值大于预期值，针对列表数据）
-    length_greater_than:
-        实际值：预期值
-        （字符串长度大于预期值，针对列表数据）
-    （注意：仅支持返回数据是json或列表格式，嵌套类型不支持，如列表嵌套字典，字典再嵌套列表）
+    equals：实际值等于预期值
+        用法: equals: {status_code: 200}
+        特列: equals: {content: "文本1"},content表示取响应结果等于预期值
+    not_equals:实际值不等于预期值
+        用法: not_equals: {name: aa}
+    contains：返回内容包含某个字段(仅字典类型)
+        用法: contains: user
+    not_contain: 返回内容不包含某个字段
+    greater_than：实际值大于预期值(针对列表数据)
+        用法: greater_than: {A1: 10}
+    length_greater_than:字符串长度大于预期值（针对列表数据）
+        用法: length_greater_than: {HOUR1: 0}
+    （注意：仅支持返回数据是json或列表格式，嵌套类型不支持，如列表嵌套字典，字典嵌套列表）
     引用csv文件数据：需加引号，如：-  equals: {data: '$csv{tagvalue}'}
 
 12、报错汇总：
