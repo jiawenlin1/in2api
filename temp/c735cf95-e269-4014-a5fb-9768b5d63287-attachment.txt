@@ -1,0 +1,13 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：查询实时报警表
+INFO     log:logger_util.py:61 接口方式：post
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/data/original
+INFO     log:logger_util.py:61 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'bbc7f11ea34c42649ea1404008bcc83a'}
+INFO     log:logger_util.py:61 请求参数：{'dataSetId': 'a9b66e92-6f83-44e3-ba02-ccbdb0f149c1', 'tableName': '报警管理-实时表', 'limit': 500}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'状态': '未恢复'}}, {'equals': {'记录值': 'A1=True'}}]
+INFO     log:logger_util.py:61 实际结果：[{'_id': 2, '记录时间': '2024-07-22 15:53:51', '__$报警时间_year': '2024-01-01 00:00:00', '__$报警时间_month': '2024-07-01 00:00:00', '__$报警时间_day': '2024-07-22 00:00:00', '__$报警时间_hour': '2024-07-22 15:00:00', '__$报警时间_minute': '2024-07-22 15:53:00', '__$报警时间_quarter': '2024-07-01 00:00:00', '__$报警时间_week': '2024-07-22 00:00:00', '__$记录时间_year': '2024-01-01 00:00:00', '__$记录时间_month': '2024-07-01 00:00:00', '__$记录时间_day': '2024-07-22 00:00:00', '__$记录时间_hour': '2024-07-22 15:00:00', '__$记录时间_minute': '2024-07-22 15:53:00', '__$记录时间_quarter': '2024-07-01 00:00:00', '__$记录时间_week': '2024-07-22 00:00:00', '报警点ID': '853d0021-0aba-4c8f-98e6-f195043b6e73', '报警时间': '2024-07-22 15:53:50', '状态': '未恢复', '报警组': '报警组300', '报警名称': '报警名称254', '报警信息': '报警信息254', '报警级别': '报警等级281', '记录值': 'A1=True', '报警类别组451': '更新类别项606'}]
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

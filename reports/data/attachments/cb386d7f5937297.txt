@@ -1,0 +1,12 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：关闭映射表
+INFO     log:logger_util.py:61 接口方式：put
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/connection/switch/2/1/off
+INFO     log:logger_util.py:61 请求头：{'X-Project': 'bbc7f11ea34c42649ea1404008bcc83a'}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 200}}]
+INFO     log:logger_util.py:61 实际结果：[{'nodeGuid': '753ec9a3-36c9-49b2-b438-8c23183685df', 'id': 1, 'type': 2, 'subType': 0, 'name': '插入5903', 'status': 2, 'errorMsg': None, 'children': []}]
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

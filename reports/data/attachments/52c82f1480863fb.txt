@@ -1,0 +1,13 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：创建历史文件夹
+INFO     log:logger_util.py:61 接口方式：post
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/historicarchive/folder
+INFO     log:logger_util.py:61 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'bbc7f11ea34c42649ea1404008bcc83a'}
+INFO     log:logger_util.py:61 请求参数：{'name': '新建文件夹990'}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 200}}]
+INFO     log:logger_util.py:61 实际结果：{'id': 'fff080c9-7d19-4b72-9b1d-fb5c44079df4', 'name': '新建文件夹990', 'createDateTime': '2024-07-22T16:02:40.4359421+08:00'}
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

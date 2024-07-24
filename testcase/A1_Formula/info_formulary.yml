@@ -1,0 +1,12 @@
+-  name: 获取配方集信息
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/projectformulaset/get-all
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   extract:
+      formulary_id: id.0
+   validate:
+      -  equals: {status_code: 200}

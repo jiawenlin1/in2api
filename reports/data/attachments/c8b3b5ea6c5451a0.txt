@@ -1,0 +1,13 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：新增配方参数
+INFO     log:logger_util.py:61 接口方式：post
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/projectformulaset/c6405838-d772-4417-ab66-f00f014b5c60/ingredient/save
+INFO     log:logger_util.py:61 请求头：{'X-Project': 'feebca2b2f4a40538c63bdff6b47b353', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImlzcyI6IkNNU3YyIiwiYXVkIjoiQXBpIn0.AJUOE6YQ5MAxDqHOIz-yQbpCKPNq5tPoFBWUY381qns'}
+INFO     log:logger_util.py:61 请求参数：[{'formulaSetId': 'c6405838-d772-4417-ab66-f00f014b5c60', 'name': '整数', 'variableName': 'A2', 'maxValue': '100', 'minValue': '0', 'remark': '', 'sort': 1, '_X_ROW_KEY': 'row_545'}, {'formulaSetId': 'c6405838-d772-4417-ab66-f00f014b5c60', 'name': '浮点数', 'variableName': 'A10', 'maxValue': '100', 'minValue': '0', 'remark': '', 'sort': 2, '_X_ROW_KEY': 'row_546'}, {'formulaSetId': 'c6405838-d772-4417-ab66-f00f014b5c60', 'name': '二进制', 'variableName': 'A1', 'maxValue': '100', 'minValue': '0', 'remark': '', 'sort': 3, '_X_ROW_KEY': 'row_547'}, {'formulaSetId': 'c6405838-d772-4417-ab66-f00f014b5c60', 'name': '字符串', 'variableName': 'A12', 'maxValue': '100', 'minValue': '0', 'remark': '', 'sort': 4, '_X_ROW_KEY': 'row_548'}]
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 200}}]
+INFO     log:logger_util.py:61 实际结果：
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

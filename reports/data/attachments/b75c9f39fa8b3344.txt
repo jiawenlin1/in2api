@@ -1,0 +1,12 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：获取所有画面子节点
+INFO     log:logger_util.py:61 接口方式：get
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/view/node/subs
+INFO     log:logger_util.py:61 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'bbc7f11ea34c42649ea1404008bcc83a'}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 200}}]
+INFO     log:logger_util.py:61 实际结果：[{'id': 4, 'parentId': 1, 'name': '子页面188', 'type': 1, 'sort': 1, 'createTime': '2024-07-22T16:02:37.7884269', 'updateTime': '2024-07-22T16:02:37.8725033'}, {'id': 5, 'parentId': None, 'name': '新建页面754', 'type': 1, 'sort': 1, 'createTime': '2024-07-22T16:02:37.9051466', 'updateTime': '2024-07-22T16:02:37.9125191'}, {'id': 1, 'parentId': None, 'name': '编辑文件夹443', 'type': 0, 'sort': 2, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2024-07-22T16:02:37.9173612'}, {'id': 3, 'parentId': 1, 'name': '子文件夹464', 'type': 0, 'sort': 2, 'createTime': '2024-07-22T16:02:37.6788733', 'updateTime': '2024-07-22T16:02:37.8781114'}]
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

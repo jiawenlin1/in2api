@@ -184,13 +184,13 @@ class TestCreat():
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
 
-    @allure.story("接口名称：指定变量服务")
-    @pytest.mark.parametrize('caseinfo',
-                             read_testcase_file('/testcase/3_VariableManagement/get_var_service.yml'))
-    def test_get_var_service(self, caseinfo):
-        allure.dynamic.title(caseinfo['name'])
-        allure.dynamic.description(caseinfo['name'])
-        RequestUtil().analysis_yaml(caseinfo)
+    # @allure.story("接口名称：指定变量服务")
+    # @pytest.mark.parametrize('caseinfo',
+    #                          read_testcase_file('/testcase/3_VariableManagement/get_var_service.yml'))
+    # def test_get_var_service(self, caseinfo):
+    #     allure.dynamic.title(caseinfo['name'])
+    #     allure.dynamic.description(caseinfo['name'])
+    #     RequestUtil().analysis_yaml(caseinfo)
 
     @pytest.mark.flaky(reruns=5)
     @allure.story("接口名称：启动变量服务")

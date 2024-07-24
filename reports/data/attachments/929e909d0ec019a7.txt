@@ -1,0 +1,13 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：更新报警组
+INFO     log:logger_util.py:61 接口方式：put
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/alarmfolder/update
+INFO     log:logger_util.py:61 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'bbc7f11ea34c42649ea1404008bcc83a'}
+INFO     log:logger_util.py:61 请求参数：{'id': '8e595467-e16a-4fc6-91c3-90a992dd0b67', 'parentId': '10e7c4c3-6502-4e00-b4d1-8fc9ac2453a6', 'name': '修改报警组737', 'nodeType': 1, 'sort': 1, 'children': []}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'nodeType': 1}}, {'contains': 'id'}]
+INFO     log:logger_util.py:61 实际结果：{'id': '8e595467-e16a-4fc6-91c3-90a992dd0b67', 'parentId': None, 'name': '修改报警组737', 'nodeType': 1, 'sort': 2, 'children': None}
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

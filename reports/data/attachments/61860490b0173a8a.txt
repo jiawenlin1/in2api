@@ -1,0 +1,12 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：查询
+INFO     log:logger_util.py:61 接口方式：get
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=副本
+INFO     log:logger_util.py:61 请求头：{}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 200}}]
+INFO     log:logger_util.py:61 实际结果：[{'child': [{'child': [], 'fileAvailableState': True, 'version': '2.16.0', 'hasPassword': False, 'id': 39, 'parentId': 35, 'name': '工程副本1721798880.261467', 'path': 'C:\\自动化工程\\工程副本1721798880.261467.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2024-07-24T13:28:00.2802724'}], 'fileAvailableState': False, 'version': None, 'hasPassword': False, 'id': 35, 'parentId': None, 'name': '文件夹2289', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2024-07-24T13:27:52.7314142'}]
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

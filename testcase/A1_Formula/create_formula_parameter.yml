@@ -1,0 +1,53 @@
+-  name: 新增配方参数
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/projectformulaset/${get_extract_data(formulary_id)}/ingredient/save
+      method: post
+      json:
+        [
+          {
+            "formulaSetId": "${get_extract_data(formulary_id)}",
+            "name": "整数",
+            "variableName": "A2",
+            "maxValue": "100",
+            "minValue": "0",
+            "remark": "",
+            "sort": 1,
+            "_X_ROW_KEY": "row_545"
+          },
+          {
+            "formulaSetId": "${get_extract_data(formulary_id)}",
+            "name": "浮点数",
+            "variableName": "A10",
+            "maxValue": "100",
+            "minValue": "0",
+            "remark": "",
+            "sort": 2,
+            "_X_ROW_KEY": "row_546"
+          },
+          {
+            "formulaSetId": "${get_extract_data(formulary_id)}",
+            "name": "二进制",
+            "variableName": "A1",
+            "maxValue": "100",
+            "minValue": "0",
+            "remark": "",
+            "sort": 3,
+            "_X_ROW_KEY": "row_547"
+          },
+          {
+            "formulaSetId": "${get_extract_data(formulary_id)}",
+            "name": "字符串",
+            "variableName": "A12",
+            "maxValue": "100",
+            "minValue": "0",
+            "remark": "",
+            "sort": 4,
+            "_X_ROW_KEY": "row_548"
+          }
+        ]
+      headers:
+        X-Project: ${get_extract_data(x_project)}
+        Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals: {status_code: 200}

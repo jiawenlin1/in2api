@@ -3,6 +3,8 @@ import pytest
 import time
 from common.parameters_util import read_testcase_file
 from common.requests_util import RequestUtil
+@allure.epic("CMS2.0")
+@allure.feature("集成互联")
 class TestCreat():
     @allure.story("接口名称：开启互联服务")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/9_Interconnection/start_internet_services.yml'))
