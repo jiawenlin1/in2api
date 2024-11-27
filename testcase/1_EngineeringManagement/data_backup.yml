@@ -1,20 +1,9 @@
--  name: 备份工程
+-  name: 获取用户信息
    base_url: ${get_base_url(cms_url)}
    request:
-      url: /api/v1/project/data/backup/${get_extract_data(import_remoteproject_id)}/true
-      method: post
-      json:
-         ["history","data","alarm","curve_root","curve_config","user_root","user_config","role_config","device_root","device_log","login_log","module_log","formula"]
-   validate:
-      -  equals: {status_code: 200}
-
--  name: 删除工程(保留本地文件)
-   base_url: ${get_base_url(cms_url)}
-   request:
-      url: /api/v1/project/node/deletenodes
-      method: put
-      data:
-         ids: ${get_extract_data(import_remoteproject_id)}
-         isDeleteFile: false
+      url: /v1/users/user/${get_extract_data(userId)}
+      method: get
+      headers:
+         Authorization: Bearer ${get_extract_data(token)}
    validate:
       -  equals: {status_code: 200}

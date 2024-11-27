@@ -1,12 +1,13 @@
--  name: 创建文件夹
+-  name: 登录
    base_url: ${get_base_url(cms_url)}
    request:
-      url: /api/v1/project/node
+      url: /v1/users/login
       method: post
       data:
-         name: 文件夹${get_random_number(1000,9999)}
-         type: 0
+          "username": ljw
+          "password": ppz1x/qYjylT6rI42UjrGw==
    extract:
-      folder_id: content
+      token: token.0
+      userId: userId.0
    validate:
       -  equals: {status_code: 200}

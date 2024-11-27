@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Nov 27 15:29:03 CST 2024","Wed Nov 27 15:29:05 CST 2024","2027","testcase.1_EngineeringManagement","test_engineering_run","TestCreat","","","登录","登录"
+"passed","Wed Nov 27 15:29:05 CST 2024","Wed Nov 27 15:29:07 CST 2024","2309","testcase.1_EngineeringManagement","test_engineering_run","TestCreat","","","获取用户信息","获取用户信息"

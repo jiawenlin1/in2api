@@ -1,1 +1,0 @@
-{"uuid": "ee7c5afa-1a43-47ed-992d-b4fa01950466", "children": ["511af144-1ac2-4d69-a411-448407112761"], "befores": [{"name": "truncate_mysqldb_fixture", "status": "passed", "start": 1721794604249, "stop": 1721794604292}], "start": 1721794604249, "stop": 1721794609335}

@@ -1,9 +1,0 @@
--  name: 数据恢复
-   base_url: ${get_base_url(cms_url)}
-   request:
-      url: /api/v1/project/${get_extract_data(import_remoteproject_id)}/import
-      method: post
-      files:
-         formFile: ${get_project_path()}\data\EngineeringManagement\验证备份还原备份数据.cmsbak
-   validate:
-      -  equals: {status_code: 200}

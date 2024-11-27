@@ -1,1 +1,0 @@
-{"uuid": "7ca77b9d-2ddb-4c92-9c5f-7839d8df56c7", "children": ["674a2e8b-381f-451a-b1de-0a27bc97f939"], "befores": [{"name": "truncate_sqlerver_fixture", "status": "passed", "start": 1721799930533, "stop": 1721799930546}], "start": 1721799930533, "stop": 1721799931099}
