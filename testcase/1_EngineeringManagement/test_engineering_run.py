@@ -8,7 +8,7 @@ from common.requests_util import RequestUtil
 @allure.epic("IN2.0")
 @allure.feature("demo")
 class TestCreat():
-    @allure.story("接口名称：重命名工程")
+    @allure.story("接口名称：登录")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/creat_folder.yml'))
     def test_login(self, caseinfo):
         allure.dynamic.title(caseinfo['name'])
