@@ -1,0 +1,9 @@
+-  name: 获取encrypt-key用于登录
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /v1/encrypt-key?password=Qwer1234
+      method: get
+   extract:
+      password: password.0
+   validate:
+      -  equals: {status_code: 200}

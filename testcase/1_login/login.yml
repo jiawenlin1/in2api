@@ -5,7 +5,7 @@
       method: post
       data:
           "username": ljw
-          "password": ppz1x/qYjylT6rI42UjrGw==
+          "password": ${get_extract_data(password)}
    extract:
       token: token.0
       userId: userId.0
