@@ -17,7 +17,7 @@ class TestCreat():
         time.sleep(2)
 
 
-    @allure.story("接口名称：获取用户信息")
+    @allure.story("接口名称：获取用户信息1")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_EngineeringManagement/data_backup.yml'))
     def test_getinfo(self, caseinfo):
         allure.dynamic.title(caseinfo['name'])
