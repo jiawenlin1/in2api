@@ -1,7 +1,7 @@
 base:
-  siot_url: http://127.0.0.1:6700
+  other_url: http://192.168.17.25:9000
   cms_url: http://192.168.17.25:6080
-  base_url: http://192.168.17.152:6080
+  base_url: http://192.168.17.25:6080
 tunnel:
   device_ip: 127.0.0.1
 log:

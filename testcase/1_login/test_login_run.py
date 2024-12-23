@@ -6,7 +6,7 @@ from common.requests_util import RequestUtil
 
 
 @allure.epic("IN2.0")
-@allure.feature("demo")
+@allure.feature("登录模块")
 class TestCreat():
     @allure.story("接口名称：获取key")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_login/get_encryptkey.yml'))
@@ -14,7 +14,7 @@ class TestCreat():
         allure.dynamic.title(caseinfo['name'])
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
-        time.sleep(2)
+        time.sleep(0.1)
 
     @allure.story("接口名称：登录")
     @pytest.mark.parametrize('caseinfo', read_testcase_file('/testcase/1_login/login.yml'))
@@ -22,7 +22,7 @@ class TestCreat():
         allure.dynamic.title(caseinfo['name'])
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
-        time.sleep(2)
+        time.sleep(0.1)
 
 
     @allure.story("接口名称：获取用户信息12")
@@ -31,5 +31,5 @@ class TestCreat():
         allure.dynamic.title(caseinfo['name'])
         allure.dynamic.description(caseinfo['name'])
         RequestUtil().analysis_yaml(caseinfo)
-        time.sleep(2)
+        time.sleep(0.1)
 

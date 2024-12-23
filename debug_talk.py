@@ -32,12 +32,14 @@ class DubugTalk:
     #获取项目路径，单斜杠
     def get_project_path(self):
         path = os.path.abspath(os.getcwd().split('debug_talk.py')[0])
+        print("get_project_path()is ", path)
         return path
 
     # 获取项目路径,双斜杠
     def get_project_path2(self):
         path = os.path.abspath(os.getcwd().split('debug_talk.py')[0])
         path2 = path.replace("\\","\\\\")
+        print("22get_project_path()is ", path2)
         return path2
 
     def get_int(self,two_name,node_name):
@@ -64,3 +66,6 @@ if __name__ == '__main__':
     # print(type(re),re)
     # print(re1)
     DubugTalk().get_project_path2()
+    # DubugTalk.get_project_path()
+    DubugTalk().get_project_path()
+

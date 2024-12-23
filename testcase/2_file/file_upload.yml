@@ -1,0 +1,12 @@
+-  name: 上传文件
+   base_url: ${get_extract_data(next_url)}
+   request:
+      url: "0"
+      method: put
+      headers:
+         Content-Type: application/octet-stream
+      files:
+         formFiles: "${get_project_path()}\\asd.jpg"
+   validate:
+   - equals:
+       status_code: 200

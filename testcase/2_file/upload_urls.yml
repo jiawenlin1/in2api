@@ -1,0 +1,13 @@
+-  name: 获取上传url
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /v1/files/upload-urls
+      method: post
+      headers:
+         Authorization: Bearer ${get_extract_data(token)}
+      json:
+        {"targetPaths":["/01105/shai/asd.jpg"]}
+   extract:
+      next_url: content["uploadUrls"]["/01105/shai/asd.jpg"]
+   validate:
+      - equals: {status_code: 200}

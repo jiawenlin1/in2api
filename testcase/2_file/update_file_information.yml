@@ -1,0 +1,14 @@
+-  name: 更新文件信息
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /v1/files?identifier=/file/01105/shai/asd.jpg?mode=1
+      method: patch
+      headers:
+         Authorization: Bearer ${get_extract_data(token)}
+      json:
+        {
+           "tags": ["api2"]
+        }
+   validate:
+   - equals:
+       status_code: 200

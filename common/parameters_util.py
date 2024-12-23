@@ -52,6 +52,7 @@ def analysis_parameters(caseinfo):
                         break
                 # 解析
                 new_caseinfo = []
+                print("^^^^^analysis结束两个循环后-【new_caseinfo】为:",new_caseinfo)
                 if length_flag:
                     for x in range(1, len(csv_data_list)):
                         temp_caseinfo = caseinfo_str
@@ -60,7 +61,8 @@ def analysis_parameters(caseinfo):
                                 temp_caseinfo = temp_caseinfo.replace("$csv{" + csv_data_list[0][y] + "}",
                                                                       csv_data_list[x][y])
                         new_caseinfo.append(json.loads(temp_caseinfo))
-                # print("解析：",new_caseinfo)
+
+                print("解析：",new_caseinfo)
                 return new_caseinfo
 
         else:
